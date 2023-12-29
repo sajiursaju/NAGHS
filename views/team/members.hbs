@@ -1,0 +1,64 @@
+{{!-- view profile image --}}
+<div style="text-align:center;">
+    <div style="text-align: center;">
+
+<div class="card">
+    {{#each team}}
+
+    {{#if this.profile_image}}
+        <img class="card_image" src="{{this.profile_image}}" alt="User Profile">
+{{else}}
+    <img class="card_image" src="/img/lock.jpg" alt="User Profile">
+{{/if}}
+    <h1 class="card_title">{{this.dataValues.name}}</h1>
+    <div class="card_job">{{this.dataValues.job_title}}</div>
+    <p class="card_about">{{this.dataValues.description}}</p>
+    <button type="button" class="btn btn primary">view profile</button>
+    {{/each}}
+</div>
+
+    </div>
+</div>
+
+
+
+<style>
+
+
+    body{
+    background-color: rgb(177, 190, 190);
+}
+.card{
+    float:right;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgb(10, 3, 3),0 6px 36px rgb(10, 3, 3);
+    background-color: aliceblue;
+
+float: inline-start;
+
+}
+
+.btn-btn-primary{background-color: brown;}
+.card_image{
+display: block;
+margin:500 auto;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+overflow: hidden;
+object-fit: cover;
+box-shadow:  0 10px 20px rgb(10, 3, 3),0 6px 36px rgb(10, 3, 3);
+
+
+
+}
+.contain{
+
+    display: block;
+
+}
+</style>
