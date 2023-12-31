@@ -7,12 +7,15 @@ var session = require('express-session');
 // Routes Import
 const home = require('./routes/home/home');
 const login = require('./routes/login/login');
-const admin_dashboard = require('./routes/admin/admin');
+
 const register = require('./routes/register/register');
 const email = require('./routes/email/email');
 const team = require('./routes/team/team');
 const homesetup = require('./routes/homesetup/homesetup');
 
+//Admin_Routes
+const admin_dashboard = require('./routes/admin/admin');
+const admin_teacher = require('./routes/admin/admin');
 // Database
 const db = require('./config/database');
 const auth = require('./middleware/auth');
@@ -62,6 +65,7 @@ app.use('/login', login);
 app.use('/register', register);
 
 app.use('/admin_dashboard', admin_dashboard);
+app.use('/admin_teacher', admin_teacher);
 app.use('/homesetup', homesetup);
 app.use('/email', email);
 app.use('/team', team);
