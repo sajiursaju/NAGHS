@@ -5,10 +5,10 @@ const auth = require('../../middleware/auth');
 const router = express.Router();
 
 
-router.get('/',auth, async(req, res) => {
-  res.render('admin/admin', {layout: 'dash-layout', user:req.session.user});
+router.get('/', async(req, res) => {
+    res.render('admin/admin', { layout: false, user: req.session.user });
 });
 
 
-  
+
 module.exports = router;

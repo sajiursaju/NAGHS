@@ -7,7 +7,7 @@ var session = require('express-session');
 // Routes Import
 const home = require('./routes/home/home');
 const login = require('./routes/login/login');
-const admin = require('./routes/admin/admin');
+const admin_dashboard = require('./routes/admin/admin');
 const register = require('./routes/register/register');
 const email = require('./routes/email/email');
 const team = require('./routes/team/team');
@@ -61,7 +61,7 @@ app.use('/', home);
 app.use('/login', login);
 app.use('/register', register);
 
-app.use('/admin', admin);
+app.use('/admin_dashboard', admin_dashboard);
 app.use('/homesetup', homesetup);
 app.use('/email', email);
 app.use('/team', team);
