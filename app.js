@@ -15,7 +15,8 @@ const homesetup = require('./routes/homesetup/homesetup');
 
 //Admin_Routes
 const admin_dashboard = require('./routes/admin/admin');
-const admin_teacher = require('./routes/admin/admin');
+const admin_teacher = require('./routes/admin/admin_teacher');
+const admin_student = require('./routes/admin/admin_student');
 // Database
 const db = require('./config/database');
 const auth = require('./middleware/auth');
@@ -66,6 +67,7 @@ app.use('/register', register);
 
 app.use('/admin_dashboard', admin_dashboard);
 app.use('/admin_teacher', admin_teacher);
+app.use('/admin_student', admin_student);
 app.use('/homesetup', homesetup);
 app.use('/email', email);
 app.use('/team', team);

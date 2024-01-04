@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const Student = db.define('student', {
+const Teacher = db.define('teacher', {
     fname: {
         type: Sequelize.STRING
     },
@@ -22,7 +22,7 @@ const Student = db.define('student', {
     }
 });
 
-Student.sync().then(() => {
-    console.log('Stdents table created');
+Teacher.sync().then(() => {
+    console.log('Teachers table created');
 });
-module.exports = Student;
+module.exports = Teacher;

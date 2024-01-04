@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get('/', async(req, res) => {
-    res.render('admin/admin', { layout: 'partials/dash-layout', user: req.session.user });
+    res.render('student/admin_student', { layout: 'partials/dash-layout', user: req.session.user });
 });
 
 
