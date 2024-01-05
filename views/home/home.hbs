@@ -26,14 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> --}}
-  <!-- =======================================================
-  * Template Name: BizLand
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -261,55 +254,67 @@
     </section><!-- End About Section -->
 
 <!-- ======= Featured Services Section ======= -->
+<section id="services" class="services">
+  <div class="container" data-aos="fade-up">
 
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-    
-        <div class="section-title">
-          <h2>Services</h2>
-          <h3>Check our <span>Services</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae
-            autem.</p>
+    <div class="section-title">
+      <h2>Services</h2>
+      <h3>Check our <span>Services</span></h3>
+    </div>
+
+    <div class="row">
+      <!-- Student List Section -->
+      <div class="col-lg-8 col-md-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bxl-dribbble"></i></div>
+          <h4><a href="">Student List</a></h4>
         </div>
-    
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6  align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-             
-              <h4><a href="">Notice Board</a></h4>
-                <marquee width="40%" direction="up" height="60%">
-                 <li>This is sample scrolling text.</li> 
-                  <li>This is sample scrolling text.</li>
-                  <li>This is sample scrolling text.</li>
-                  <li>This is sample scrolling text.</li>
-                
-                </marquee>
-          
-            </div>
-          </div>
-          
-    
+
+        <!-- Repeat this block for each student list item -->
+        <div class="icon-box">
+          <div class="icon"><i class="bx bxl-dribbble"></i></div>
+          <h4><a href="">Student List</a></h4>
         </div>
-    
+
+        <div class="icon-box">
+          <div class="icon"><i class="bx bxl-dribbble"></i></div>
+          <h4><a href="">Student List</a></h4>
+        </div>
+
+        <div class="icon-box">
+          <div class="icon"><i class="bx bxl-dribbble"></i></div>
+          <h4><a href="">Student List</a></h4>
+        </div>
       </div>
-    </section>
+
+      <!-- Notice Board Section -->
+      <div class="col-lg-4 col-md-12 align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box">
+          <h4><a href="#">Notice Board</a></h4>
+
+          <!-- Add CSS styles for notice container -->
+          <div class="notice-container" style="height: 150px; overflow: hidden; transition: all 0.3s ease;">
+            <ul class="notice-list">
+              <li><a href="#" class="notice-item">This is the first notice.</a></li>
+              <li><a href="#" class="notice-item">This is the second notice.</a></li>
+              <!-- Repeat this block for each notice item -->
+              <!-- <li><a href="#" class="notice-item">...</a></li> -->
+            </ul>
+          </div>
+
+          <!-- Add up and down arrow buttons -->
+          <div class="arrow-buttons">
+            <button onclick="scrollNotices(-1)" class="btn btn-sm btn-secondary">▲</button>
+            <button onclick="scrollNotices(1)" class="btn btn-sm btn-secondary">▼</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 <!-- End Featured Services Section -->
+
 
 
     <!-- ======= Counts Section ======= -->
@@ -1068,8 +1073,18 @@
         // based on the selected language.
         // For simplicity, let's just alert the selected language for now.
         alert('Switched to ' + language + ' language');
-      }
+      } 
 
+
+  </script>
+
+  <script>
+    // JavaScript function to scroll notices
+    function scrollNotices(direction) {
+      const noticeContainer = document.querySelector('.notice-container');
+      const scrollAmount = direction * 30; // Adjust scroll speed if needed
+      noticeContainer.scrollTop += scrollAmount;
+    }
   </script>
 
 
