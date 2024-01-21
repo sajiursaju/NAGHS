@@ -15,7 +15,12 @@ const homesetup = require('./routes/homesetup/homesetup');
 
 //Admin_Routes
 const admin_dashboard = require('./routes/admin/admin');
+const admin_view_teacher = require('./routes/admin/admin_view_teacher');
 const admin_teacher = require('./routes/admin/admin_teacher');
+const admin_add_teacher = require('./routes/admin/admin_add_teacher');
+const admin_approve_teacher = require('./routes/admin/admin_approve_teacher');
+const admin_add_student = require('./routes/admin/admin_add_student');
+
 const admin_student = require('./routes/admin/admin_student');
 // Database
 const db = require('./config/database');
@@ -64,10 +69,16 @@ app.use(session({
 app.use('/', home);
 app.use('/login', login);
 app.use('/register', register);
+// admin teacher's related  routes
+app.use('/admin_teacher', admin_teacher);
+app.use('/admin_add_teacher', admin_add_teacher);
+app.use('/admin_view_teacher', admin_view_teacher);
+app.use('/admin_approve_teacher', admin_approve_teacher);
 
 app.use('/admin_dashboard', admin_dashboard);
-app.use('/admin_teacher', admin_teacher);
+
 app.use('/admin_student', admin_student);
+//usual routes
 app.use('/homesetup', homesetup);
 app.use('/email', email);
 app.use('/team', team);

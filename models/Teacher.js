@@ -2,27 +2,27 @@ const Sequelize = require('sequelize');
 const db = require('../config/database');
 
 const Teacher = db.define('teacher', {
-    fname: {
-        type: Sequelize.STRING
-    },
-    lname: {
-        type: Sequelize.STRING
-    },
-    user_name: {
+    name: {
         type: Sequelize.STRING
     },
     email: {
         type: Sequelize.STRING
     },
-    phone: {
+    website: {
         type: Sequelize.STRING
     },
-    password: {
+    mobile: {
         type: Sequelize.STRING
+    },
+    approved: { // Add the 'approved' column
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
     }
 });
 
 Teacher.sync().then(() => {
     console.log('Teachers table created');
 });
+
 module.exports = Teacher;

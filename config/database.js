@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 // module.exports =  new Sequelize('ischvfkd_company',
 // 'ischvfkd_company','IarePass888', {
 
-module.exports = new Sequelize('soft24', 'root', '', {
+module.exports = new Sequelize('NAGHS', 'root', '', {
 
     host: 'localhost',
     dialect: 'mysql',
